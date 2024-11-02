@@ -1,0 +1,12 @@
+body {
+  margin: 0; /* Removes default margin from the body */
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; /* Sets a stack of fonts for the body text */
+  -webkit-font-smoothing: antialiased; /* Smooths fonts on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smooths fonts on macOS Firefox */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; /* Sets a stack of fonts for code elements */
+}

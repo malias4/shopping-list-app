@@ -1,0 +1,294 @@
+/* Different sections of app */
+
+/* Header section styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 10px 5px -5px gray;
+}
+
+/* App name styling within the header */
+.header .app-name {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Toolbar section styling */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 6px 3px -3px gray;
+}
+
+/* List name styling within the toolbar */
+.toolbar .list-name {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Item container styling */
+.item-container {
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field styling within item container */
+.item-container input {
+  width: 50%;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+/* Placeholder styling for input fields */
+.item-container input::placeholder {
+  color: #adadad;
+  text-align: center;
+}
+
+/* Input field focus state styling */
+.item-container input:focus {
+  border-bottom: none;
+}
+
+/* Styling for input fields when they are not showing placeholder text */
+.item-container input:not(:placeholder-shown) {
+  border-bottom: none;
+}
+
+/* Footer section styling */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 -6px 3px -3px gray;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Member list container styling */
+.member-list-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+/* Member list header styling */
+.member-list-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Member list styling */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Member list names styling */
+.member-list-names {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  max-width: calc(100% - 20px);
+}
+
+/* Individual member item styling */
+.member-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Member name styling */
+.member-name {
+  margin-top: 5px;
+}
+
+/* Member actions styling */
+.member-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Crown icon styling */
+.crown-icon {
+  color: #daa700;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  /* App name styling for smaller screens */
+  .header .app-name {
+    font-size: 16px;
+  }
+
+  /* User buttons styling for smaller screens */
+  .header .user-buttons button {
+    padding: 5px 10px;
+  }
+
+  /* Hide icon in app name for smaller screens */
+  .header .app-name .icon {
+    display: none;
+  }
+
+  /* Toolbar styling for smaller screens */
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Toolbar div styling for smaller screens */
+  .toolbar > div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /* List name styling for smaller screens */
+  .toolbar .list-name {
+    font-size: 20px;
+  }
+
+  /* Edit buttons styling for smaller screens */
+  .toolbar .edit-buttons {
+    margin-left: 10px;
+  }
+
+  /* Toggle buttons styling for smaller screens */
+  .toolbar .toggle-buttons {
+    text-align: center;
+  }
+}
+
+/* Custom buttons for the app */
+
+/* User buttons styling */
+.user-buttons {
+  display: flex;
+  gap: 8px;
+  border-radius: 10px;
+}
+.user-buttons button {
+  border-radius: 10px;
+  background-color: #0080f0;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+/* Success buttons styling */
+.success-buttons {
+  border-radius: 10px;
+  background-color: #33a64c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+.success-buttons:hover {
+  background-color: #2d8f3e;
+}
+
+/* Edit buttons styling */
+.edit-buttons {
+  border-radius: 10px;
+  background-color: #1ca5b8;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+.edit-buttons:hover {
+  background-color: #188c9b;
+}
+
+/* Toggle buttons styling */
+.toggle-buttons {
+  border-radius: 10px;
+  background-color: transparent;
+  color: #2d8f3e;
+  border: 2px solid #2d8f3e;
+  padding: 3px 8px;
+  width: 150px;
+}
+
+/* Resolve buttons styling */
+.resolve-buttons {
+  border-radius: 10px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  width: 80px;
+}
+.resolve-buttons.false {
+  background-color: #33a64c;
+}
+.resolve-buttons.false:hover {
+  background-color: #2d8f3e;
+}
+.resolve-buttons.true {
+  background-color: #888888;
+}
+.resolve-buttons.true:hover {
+  background-color: #797979;
+}
+
+/* Remove buttons styling */
+.remove-buttons {
+  border-radius: 10px;
+  background-color: #db2828;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  width: 80px;
+}
+.remove-buttons:hover {
+  background-color: #b82121;
+}
+
+/* Close buttons styling */
+.close-buttons {
+  border-radius: 10px;
+  background-color: #888888;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  width: 80px;
+}
+.close-buttons:hover {
+  background-color: #797979;
+}
