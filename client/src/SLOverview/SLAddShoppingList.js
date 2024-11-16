@@ -1,8 +1,7 @@
 import Modal from "react-bootstrap/Modal";
-
 import Form from "react-bootstrap/Form";
 
-function UpdateName({ show, handleClose, data, handlerMap }) {
+function CreateShoppingListForm({ show, handleClose, handlerMap }) {
   return (
     <Modal show={show} onHide={handleClose}>
       <Form
@@ -11,29 +10,25 @@ function UpdateName({ show, handleClose, data, handlerMap }) {
           e.stopPropagation();
           const formData = new FormData(e.target);
           const values = Object.fromEntries(formData);
-          handlerMap.updateName({ name: values.name });
+          if (handlerMap && handlerMap.createShoppingList) {
+            handlerMap.createShoppingList(values.name);
+          }
           handleClose();
         }}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Edit List Name</Modal.Title>
+          <Modal.Title>Create Shopping List</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Label>List Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            defaultValue={data.name}
-            maxLength={100}
-            required
-          />
+          <Form.Control type="text" maxLength={100} name="name" required />
         </Modal.Body>
         <Modal.Footer>
           <button type="button" className="close-buttons" onClick={handleClose}>
             Close
           </button>
           <button className="success-buttons" type="submit">
-            Save Changes
+            Create
           </button>
         </Modal.Footer>
       </Form>
@@ -41,4 +36,4 @@ function UpdateName({ show, handleClose, data, handlerMap }) {
   );
 }
 
-export default UpdateName;
+export default CreateShoppingListForm;

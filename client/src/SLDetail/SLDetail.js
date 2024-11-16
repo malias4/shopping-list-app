@@ -1,4 +1,3 @@
-import Header from "./Header";
 import Toolbar from "./Toolbar";
 import SLItemList from "./SLItemList";
 import SLDetailProvider from "./SLDetailProvider";
@@ -8,7 +7,6 @@ function SLDetail() {
   return (
     <div>
       <SLDetailProvider>
-        <Header />
         <Toolbar />
         <SLItemList />
         <Footer />
