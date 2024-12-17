@@ -1,0 +1,735 @@
+{
+  "info": {
+    "_postman_id": "75f6912e-c1d8-424c-a59d-c5fdf89ba3d4",
+    "name": "my_shopping_list_app_backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34185349"
+  },
+  "item": [
+    {
+      "name": "shopL",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listName\": \"Picnic\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b3a6e572d5d16bbd7f131\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/get",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "get"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b3e26b44dbddc0b274fc9\",\r\n  \"listName\": \"Updated Picnic\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/update",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "archive",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b3e26b44dbddc0b274fc9\",\r\n  \"isArchived\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/archive",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "archive"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "disabled": true
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/shopL/list",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "list"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3a6e572d5d16bbd7f131\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/delete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "delete"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "removeMember",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3a6e572d5d16bbd7f131\",\r\n  \"userId\": \"674b45749e34edcd3aa0eeaa\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/removeMember",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "removeMember"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "addMember",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzRiNWQyYzc4Y2MyMjc2ZjQ4YjUzOGQiLCJpYXQiOjE3MzI5OTMwODQsImV4cCI6MTczMjk5NjY4NH0.uLIukpNo4PibE8O1WF_ZB6E-idf2Fs-vSpUJs_8lCaw",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3f26e9462175e2ef4e04\",\r\n  \"userId\": \"674b5d2c78cc2276f48b538d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/addMember",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "addMember"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3e26b44dbddc0b274fc9\",\r\n  \"itemName\": \"bread\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/item/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "item", "create"],
+              "query": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "disabled": true
+                },
+                {
+                  "key": "x-user-id",
+                  "value": "84892",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3e26b44dbddc0b274fc9\",\r\n  \"itemId\": \"879ebacbba7059b066823f418b60b886\",\r\n  \"itemName\": \"Updated Wine\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/item/update",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "item", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3e26b44dbddc0b274fc9\",\r\n  \"itemId\": \"879ebacbba7059b066823f418b60b886\",\r\n  \"isResolved\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/item/status",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "item", "status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b3a6e572d5d16bbd7f131\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/item/list",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "item", "list"],
+              "query": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "disabled": true
+                },
+                {
+                  "key": "x-user-id",
+                  "value": "84892",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "14515",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"listId\": \"674b3a6e572d5d16bbd7f131\",\r\n  \"itemId\": \"31400367bc19ff6f197d5202e0061db2\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/shopL/item/delete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["shopL", "item", "delete"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "1414414",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"<script>alert('XSS')</script>aaaa@example.com\",\r\n  \"name\": \"<script>alert('XSS')</script>Honza\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/create",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "create"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "1414414",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b45749e34edcd3aa0eeaa\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/get",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "get"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "1414414",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b45749e34edcd3aa0eeaa\",\r\n  \"email\": \"updated@example.com\",\r\n  \"name\": \"Updated User\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/update",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "update"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "1414414",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8000/user/list",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "list"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "x-user-id",
+                "value": "1414414",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"674b5d2c78cc2276f48b538d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/delete",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "delete"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"name\": \"Test User\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8000/user/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8000",
+              "path": ["user", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
