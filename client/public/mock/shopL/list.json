@@ -1,0 +1,20 @@
+{
+  "shoppingLists": [
+    {
+      "_id": "676823c34f0eddbb96bf38e9",
+      "listName": "SL 1",
+      "state": "active",
+      "ownerId": "60d5ec49f1b2c12d4c8e4b5n",
+      "memberIdList": ["u2"],
+      "itemList": []
+    },
+    {
+      "_id": "676823c14f0eddbb96bf38e8",
+      "listName": "SL 2",
+      "state": "archived",
+      "ownerId": "60d5ec49f1b2c12d4c8e4b5n",
+      "memberIdList": ["u2", "u3"],
+      "itemList": []
+    }
+  ]
+}
